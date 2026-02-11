@@ -39,11 +39,11 @@ jobs:
           DB_USERNAME=$(echo "$SECRET_JSON" | jq -r '.DB_USERNAME')
           DB_PASSWORD=$(echo "$SECRET_JSON" | jq -r '.DB_PASSWORD')
 
-          echo "DB_USERNAME=$DB_USERNAME" >> $GITHUB_ENV
+          echo "DB_USERNMAE=$DB_USERNMAE" >> $GITHUB_ENV
           echo "DB_PASSWORD=$DB_PASSWORD" >> $GITHUB_ENV
 
       # ✅ Use Secret (Demo Only)
       - name: Use Secret
         run: |
-          echo "Database Username: $DB_USERNAME"
+          echo "Database Username: $DB_USERNMAE"
           echo "Password : $DB_PASSWORD"
